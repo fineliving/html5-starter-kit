@@ -1,0 +1,25 @@
+{
+  "name": "fe-knowledge-base",
+  "version": "1.0.0",
+  "description": "前端编程基础",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@fineliving.github.com:fineliving/fe-knowledge-base.git"
+  },
+  "keywords": [
+    "前端",
+    "基础",
+    "html(5)",
+    "css(3)",
+    "js(es6)"
+  ],
+  "author": "liyang",
+  "license": "ISC"
+}
