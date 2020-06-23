@@ -24,8 +24,13 @@
   ],
   "author": "liyang",
   "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.5.2",
-    "vuepress": "^1.5.2"
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-demo-block": "^0.7.2",
+    "vuepress-plugin-run": "^1.0.1"
   }
 }

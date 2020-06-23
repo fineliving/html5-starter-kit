@@ -12,7 +12,24 @@ const jsCourseSidebar = require("./sidebars/js-book1")
 module.exports = {
   title: "编程基础",
   description: "前端编程基础",
-  plugins: ["@vuepress/back-to-top"],
+  head: [
+    ["script", { src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" }],
+    ["script", { src: "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js" }],
+    ["script", { src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" }],
+    ["script", { src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js" }],
+  ],
+  plugins: [
+    "@vuepress/back-to-top",
+    "demo-block",
+    [
+      "run",
+      {
+        jsLabs: ["https://unpkg.com/element-ui/lib/index.js"],
+        cssLabs: ["https://unpkg.com/element-ui/lib/theme-chalk/index.css"],
+        reverse: false,
+      },
+    ],
+  ],
   themeConfig: {
     nav: [
       {
