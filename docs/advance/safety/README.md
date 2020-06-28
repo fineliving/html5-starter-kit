@@ -1,0 +1,6 @@
+# 安全知识图谱
+
+- [XSS](https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%B6%B2%E7%AB%99%E6%8C%87%E4%BB%A4%E7%A2%BC)
+- [CSRF](https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0)
+- [CSP](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP)
+- [Same-origin Policy](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)

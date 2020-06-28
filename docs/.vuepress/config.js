@@ -1,18 +1,57 @@
-// const path = require("path")
-// const fs = require("fs")
-// const htmlFolder = path.join(__dirname, "../html/")
-// const html = fs.readdirSync(htmlFolder).filter((c) => c !== "README.md")
-const htmlSidebar = require("./sidebars/html")
-const htmlCourse1Sidebar = require("./sidebars/html-course1")
-const cssSidebar = require("./sidebars/css")
-const cssCourse1Sidebar = require("./sidebars/css-course1")
-const jsSidebar = require("./sidebars/js")
-const jsCourse1Sidebar = require("./sidebars/js-course1")
-const jsBook1Sidebar = require("./sidebars/js-book1")
+const htmlSidebar = require("./sidebars/basic/html")
+const htmlCourse1Sidebar = require("./sidebars/basic/html-course1")
+const cssSidebar = require("./sidebars/basic/css")
+const cssCourse1Sidebar = require("./sidebars/basic/css-course1")
+const jsSidebar = require("./sidebars/basic/js")
+const jsCourse1Sidebar = require("./sidebars/basic/js-course1")
+const jsBook1Sidebar = require("./sidebars/basic/js-book1")
+
+const editorSidebar = require("./sidebars/software/editor")
+const debugSidebar = require("./sidebars/software/debug")
+const sliceSidebar = require("./sidebars/software/slice")
+
+const toolsSidebar = require("./sidebars/libraries/tools")
+const frameworksSidebar = require("./sidebars/libraries/frameworks")
+
+const networkCommunicationSidebar = require("./sidebars/advance/network-communication")
+const performanceSidebar = require("./sidebars/advance/performance")
+const safetySidebar = require("./sidebars/advance/safety")
+const browserSidebar = require("./sidebars/advance/browser")
+
+const moduleSidebar = require("./sidebars/engineering/module")
+const versionSidebar = require("./sidebars/engineering/version")
+const dependenceSidebar = require("./sidebars/engineering/dependence")
+const semanticEnhancementSidebar = require("./sidebars/engineering/semantic-enhancement")
+const buildToolSidebar = require("./sidebars/engineering/build-tool")
+const converterSidebar = require("./sidebars/engineering/converter")
+const ciCdSidebar = require("./sidebars/engineering/ci-cd")
+const codeQualitySidebar = require("./sidebars/engineering/code-quality")
+
+const designSidebar = require("./sidebars/model/design")
+const architectureSidebar = require("./sidebars/model/architecture")
+const genericitySidebar = require("./sidebars/model/genericity")
+const programmingSidebar = require("./sidebars/model/programming")
+
+const visualizationSidebar = require("./sidebars/branch/visualization")
+const mobileSidebar = require("./sidebars/branch/mobile")
+const gameSidebar = require("./sidebars/branch/game")
+const portableSidebar = require("./sidebars/branch/portable")
+
+const compileSidebar = require("./sidebars/principle/compile")
+const structureSidebar = require("./sidebars/principle/structure")
+const algorithmSidebar = require("./sidebars/principle/algorithm")
+const systemSidebar = require("./sidebars/principle/system")
+const networkSidebar = require("./sidebars/principle/network")
+
+const nodeSidebar = require("./sidebars/be-konwledge/node")
+const languageSidebar = require("./sidebars/be-konwledge/language")
+const webserverSidebar = require("./sidebars/be-konwledge/webserver")
+const databaseSidebar = require("./sidebars/be-konwledge/database")
+const cacheSidebar = require("./sidebars/be-konwledge/cache")
 
 module.exports = {
-  title: "编程基础",
-  description: "前端编程基础",
+  title: "Leo",
+  description: "我的前端知识体系",
   head: [
     ["script", { src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" }],
     ["script", { src: "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js" }],
@@ -34,58 +73,257 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: "HTML(5)",
+        text: "编程基础",
         items: [
           {
-            text: "知识图谱",
-            link: "/html/",
+            text: "HTML(5)",
+            items: [
+              { text: "知识图谱", link: "/basic/html/" },
+              { text: "javascript高级程序设计", link: "/basic/html-course1/" }
+            ],
           },
           {
-            text: "教程/书籍",
-            items: [{ text: "javascript高级程序设计", link: "/html-course1/" }],
+            text: "CSS(3)",
+            items: [
+              { text: "知识图谱", link: "/basic/css/" },
+              { text: "技术胖CSS3", link: "/basic/css-course1/" }
+            ],
+          },
+          {
+            text: "JavaScript(ES6+)",
+            items: [
+              { text: "知识图谱", link: "/basic/js/" },
+              { text: "技术胖ES6", link: "/basic/js-course1/" },
+              { text: "javascript高级程序设计", link: "/basic/js-book1/" }
+            ],
           },
         ],
       },
       {
-        text: "CSS(3)",
+        text: "开发软件",
         items: [
           {
-            text: "知识图谱",
-            link: "/css/",
+            text: "编辑器和IDE",
+            items: [{ text: "知识图谱", link: "/software/editor/" }],
           },
           {
-            text: "教程",
-            items: [{ text: "技术胖CSS3", link: "/css-course1/" }],
+            text: "调试工具",
+            items: [{ text: "知识图谱", link: "/software/debug/" }],
+          },
+          {
+            text: "切图",
+            items: [{ text: "知识图谱", link: "/software/slice/" }],
           },
         ],
       },
       {
-        text: "JavaScript(ES6+)",
+        text: "类库框架",
         items: [
           {
-            text: "知识图谱",
-            link: "/js/",
+            text: "工具库",
+            items: [{ text: "知识图谱", link: "/libraries/tools/" }],
           },
           {
-            text: "教程",
-            items: [{ text: "技术胖ES6", link: "/js-course1/" }],
+            text: "开发库/框架",
+            items: [{ text: "知识图谱", link: "/libraries/frameworks/" }],
+          },
+        ],
+      },
+      {
+        text: "知识进阶",
+        items: [
+          {
+            text: "网络通信",
+            items: [{ text: "知识图谱", link: "/advance/network-communication/" }],
           },
           {
-            text: "书籍",
-            items: [{ text: "javascript高级程序设计", link: "/js-book1/" }],
+            text: "性能",
+            items: [{ text: "知识图谱", link: "/advance/performance/" }],
+          },
+          {
+            text: "安全",
+            items: [{ text: "知识图谱", link: "/advance/safety/" }],
+          },
+          {
+            text: "浏览器",
+            items: [{ text: "知识图谱", link: "/advance/browser/" }],
+          },
+        ],
+      },
+      {
+        text: "工程开发",
+        items: [
+          {
+            text: "模块化",
+            items: [{ text: "知识图谱", link: "/engineering/module/" }],
+          },
+          {
+            text: "版本管理",
+            items: [{ text: "知识图谱", link: "/engineering/version/" }],
+          },
+          {
+            text: "依赖管理",
+            items: [{ text: "知识图谱", link: "/engineering/dependence/" }],
+          },
+          {
+            text: "语言增强",
+            items: [{ text: "知识图谱", link: "/engineering/semantic-enhancement/" }],
+          },
+          {
+            text: "构建工具",
+            items: [{ text: "知识图谱", link: "/engineering/build-tool/" }],
+          },
+          {
+            text: "转换器",
+            items: [{ text: "知识图谱", link: "/engineering/converter/" }],
+          },
+          {
+            text: "CI/CD",
+            items: [{ text: "知识图谱", link: "/engineering/ci-cd/" }],
+          },
+          {
+            text: "代码质量",
+            items: [{ text: "知识图谱", link: "/engineering/code-quality/" }],
+          },
+        ],
+      },
+      {
+        text: "编程思想",
+        items: [
+          {
+            text: "设计模式",
+            items: [{ text: "知识图谱", link: "/model/design/" }],
+          },
+          {
+            text: "架构模式",
+            items: [{ text: "知识图谱", link: "/model/architecture/" }],
+          },
+          {
+            text: "编程泛型",
+            items: [{ text: "知识图谱", link: "/model/genericity/" }],
+          },
+          {
+            text: "程序设计",
+            items: [{ text: "知识图谱", link: "/model/programming/" }],
+          },
+        ],
+      },
+      {
+        text: "领域分支",
+        items: [
+          {
+            text: "可视化",
+            items: [{ text: "知识图谱", link: "/branch/visualization/" }],
+          },
+          {
+            text: "移动Web",
+            items: [{ text: "知识图谱", link: "/branch/mobile/" }],
+          },
+          {
+            text: "游戏开发",
+            items: [{ text: "知识图谱", link: "/branch/game/" }],
+          },
+          {
+            text: "便携式设备",
+            items: [{ text: "知识图谱", link: "/branch/portable/" }],
+          },
+        ],
+      },
+      {
+        text: "计算机基础",
+        items: [
+          {
+            text: "编译原理",
+            items: [{ text: "知识图谱", link: "/principle/compile/" }],
+          },
+          {
+            text: "数据结构",
+            items: [{ text: "知识图谱", link: "/principle/structure/" }],
+          },
+          {
+            text: "算法",
+            items: [{ text: "知识图谱", link: "/principle/algorithm/" }],
+          },
+          {
+            text: "操作系统",
+            items: [{ text: "知识图谱", link: "/principle/system/" }],
+          },
+          {
+            text: "计算机网络",
+            items: [{ text: "知识图谱", link: "/principle/network/" }],
+          },
+        ],
+      },
+      {
+        text: "后端知识",
+        items: [
+          {
+            text: "Node",
+            items: [{ text: "知识图谱", link: "/be-konwledge/node/" }],
+          },
+          {
+            text: "编程语言",
+            items: [{ text: "知识图谱", link: "/be-konwledge/language/" }],
+          },
+          {
+            text: "网页服务器",
+            items: [{ text: "知识图谱", link: "/be-konwledge/webserver/" }],
+          },
+          {
+            text: "数据库",
+            items: [{ text: "知识图谱", link: "/be-konwledge/database/" }],
+          },
+          {
+            text: "数据缓存",
+            items: [{ text: "知识图谱", link: "/be-konwledge/cache/" }],
           },
         ],
       },
     ],
     sidebarDepth: 3,
     sidebar: {
-      "/html/": htmlSidebar,
-      "/html-course1/": htmlCourse1Sidebar,
-      "/css/": cssSidebar,
-      "/css-course1/": cssCourse1Sidebar,
-      "/js/": jsSidebar,
-      "/js-course1/": jsCourse1Sidebar,
-      "/js-book1/": jsBook1Sidebar,
+      "/basic/html/": htmlSidebar,
+      "/basic/html-course1/": htmlCourse1Sidebar,
+      "/basic/css/": cssSidebar,
+      "/basic/css-course1/": cssCourse1Sidebar,
+      "/basic/js/": jsSidebar,
+      "/basic/js-course1/": jsCourse1Sidebar,
+      "/basic/js-book1/": jsBook1Sidebar,
+      "/software/editor/": editorSidebar,
+      "/software/debug/": debugSidebar,
+      "/software/slice/": sliceSidebar,
+      "/libraries/tools/": toolsSidebar,
+      "/libraries/frameworks/": frameworksSidebar,
+      "/advance/network-communication/": networkCommunicationSidebar,
+      "/advance/performance/": performanceSidebar,
+      "/advance/safety/": safetySidebar,
+      "/advance/browser/": browserSidebar,
+      "/engineering/module/": moduleSidebar,
+      "/engineering/version/": versionSidebar,
+      "/engineering/dependence/": dependenceSidebar,
+      "/engineering/semantic-enhancement/": semanticEnhancementSidebar,
+      "/engineering/build-tool/": buildToolSidebar,
+      "/engineering/converter/": converterSidebar,
+      "/engineering/ci-cd/": ciCdSidebar,
+      "/engineering/code-quality/": codeQualitySidebar,
+      "/model/design/": designSidebar,
+      "/model/architecture/": architectureSidebar,
+      "/model/genericity/": genericitySidebar,
+      "/model/programming/": programmingSidebar,
+      "/branch/visualization/": visualizationSidebar,
+      "/branch/mobile/": mobileSidebar,
+      "/branch/game/": gameSidebar,
+      "/branch/portable/": portableSidebar,
+      "/principle/compile/": compileSidebar,
+      "/principle/structure/": structureSidebar,
+      "/principle/algorithm/": algorithmSidebar,
+      "/principle/system/": systemSidebar,
+      "/principle/network/": networkSidebar,
+      "/be-konwledge/node/": nodeSidebar,
+      "/be-konwledge/language/": languageSidebar,
+      "/be-konwledge/webserver/": webserverSidebar,
+      "/be-konwledge/database/": databaseSidebar,
+      "/be-konwledge/cache/": cacheSidebar,
     },
   },
 }
