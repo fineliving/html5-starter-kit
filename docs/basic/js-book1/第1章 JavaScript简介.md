@@ -1,4 +1,4 @@
-# 第1章 JavaScript 简介
+# 第 1 章 JavaScript 简介
 
 **_1. 本章内容_**
 
@@ -37,7 +37,7 @@
 - 文档对象模型（DOM）
 - 浏览器对象模型（BOM）
 
-![three-parts](/js-book1/three-parts.png)
+![three-parts](/basic/js-book1/three-parts.png)
 
 ### 1.2.1 ECMAScript
 
@@ -85,7 +85,7 @@ ECMA-262 给出了 ECMAScript 兼容的定义。要想成为 ECMAScript 的实�
 
 2008 年，五大主流 Web 浏览器（IE、Firefox、Safari、Chrome 和 Opera）全部做到了与 ECMA-262 兼容。
 
-![browser-bugs](/js-book1/browser-bugs.png)
+![browser-bugs](/basic/js-book1/browser-bugs.png)
 
 ### 1.2.2 文档对象模型（DOM）
 
@@ -98,7 +98,7 @@ DOM 把整个页面映射为一个多层节点结构:
 - 通过 DOM 创建的这个表示文档的树形图，开发人员获得了控制页面内容和结构的主动权。
 - 借助 DOM 提供的 API，开发人员可以轻松自如地删除、添加、替换或修改任何节点。
 
-<img src="/js-book1/multi-node.png" alt="multi-node" style="zoom:50%;" />
+<img src="/basic/js-book1/multi-node.png" alt="multi-node" style="zoom:50%;" />
 
 **_2. 为什么要使用 DOM？_**
 
@@ -128,7 +128,7 @@ DOM 把整个页面映射为一个多层节点结构:
 **_5. Web 浏览器对 DOM 的支持：_**
 
 支持 DOM 已经成为浏览器开发商的首要目标，主流浏览器每次发布新版本都会改进对 DOM 的支持。
-![browser-bugs-dom](/js-book1/browser-bugs-dom.png)
+![browser-bugs-dom](/basic/js-book1/browser-bugs-dom.png)
 
 ### 1.2.3 浏览器对象模型（BOM）
 
@@ -155,7 +155,7 @@ DOM 把整个页面映射为一个多层节点结构:
 - 作为 Netscape“继承人”的 Mozilla 公司，是目前唯一还在沿用最初的 JavaScript 版本编号序列的浏览器开发商。
 - Netscape/Mozilla 浏览器中 JavaScript 版本号的递增过程：
 
-![js-edition](/js-book1/js-edition.png)
+![js-edition](/basic/js-book1/js-edition.png)
 
 - 目前，JavaScript 2.0 还没有目标实现。
 

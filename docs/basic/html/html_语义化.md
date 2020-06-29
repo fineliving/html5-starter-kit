@@ -30,7 +30,7 @@
 
 看下图没有用 div 标签来布局：
 
-<img :src="$withBase('/html/html5-layout.jpg')" alt="html5-layout">
+<img :src="$withBase('/basic/html/html5-layout.jpg')" alt="html5-layout">
 
 结论：不能因为有了 HTML 5 标签就弃用了 div，每个事物都有它的独有作用的。
 

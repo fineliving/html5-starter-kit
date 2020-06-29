@@ -1,4 +1,4 @@
-// CSS(3)的知识图谱
+// 技术胖CSS3
 module.exports = [
   "/basic/css-course1/",
   "/basic/css-course1/第1章 环境搭建，伪类选择器，伪元素",

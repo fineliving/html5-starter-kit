@@ -1,4 +1,4 @@
-// JavaScript(ES6+)的知识图谱
+// javascript 高级程序设计
 module.exports = [
   "/basic/js-book1/",
   "/basic/js-book1/本书结构",

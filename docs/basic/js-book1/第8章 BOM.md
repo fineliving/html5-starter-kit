@@ -1,4 +1,4 @@
-# 第8章 BOM
+# 第 8 章 BOM
 
 **_1. 本章内容_**
 
@@ -124,7 +124,7 @@ Windows Mobile 平台的 IE 浏览器不允许通过 window.property = value 之
 
 - 图 8-1 展示了在最高层窗口中，通过代码来访问前面例子中每个框架的不同方式。
 
-  ![frameVisit](/js-book1/frameVisit.png)
+  ![frameVisit](/basic/js-book1/frameVisit.png)
 
 **_3. parent 对象_**
 
@@ -171,7 +171,7 @@ Windows Mobile 平台的 IE 浏览器不允许通过 window.property = value 之
 
   - 图 8-2 展示了在将前面例子加载到浏览器之后，不同 window 对象的值。
 
-    ![frameWindow](/js-book1/frameWindow.png)
+    ![frameWindow](/basic/js-book1/frameWindow.png)
 
 注意，**除非最高层窗口是通过 window.open()打开的**（本章后面将会讨论），否则其 window 对象的 name 属性不会包含任何值。
 
@@ -620,7 +620,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
 - 具体来说，调用 alert()方法的结果就是向用户显示一个系统对话框，其中包含指定的文本和一个 OK（“确定”）按钮。例如，alert("Hello world!")会在 Windows XP 系统的 IE 中生成如图 8-3 所示的对话框。
 
-  ![](/js-book1/alert.png)
+  ![](/basic/js-book1/alert.png)
 
 - 通常使用 alert()生成的“警告”对话框向用户显示一些他们无法控制的消息，例如错误消息。而用户只能在看完消息后关闭对话框。
 
@@ -630,7 +630,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
 - 从向用户显示消息的方面来看，这种“确认”对话框很像是一个“警告”对话框。但二者的主要区别在于“确认”对话框除了显示 OK 按钮外，还会显示一个 Cancel（“取消”）按钮，两个按钮可以让用户决定是否执行给定的操作。例如，confirm("Are yousure?")会显示如图 8-4 所示的确认对话框。
 
-  ![](/js-book1/confirm.png)
+  ![](/basic/js-book1/confirm.png)
 
 - 为了确定用户是单击了 OK 还是 Cancel，可以检查 confirm()方法返回的布尔值：true 表示单击了 OK，false 表示单击了 Cancel 或单击了右上角的 X 按钮。确认对话框的典型用法如下。
 
@@ -653,7 +653,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
 - prompt()方法接受两个参数：要显示给用户的文本提示和文本输入域的默认值（可以是一个空字符串）。调用 prompt("What's your name?","Michael")会得到如图 8-5 所示的对话框。
 
-  ![](/js-book1/prompt.png)
+  ![](/basic/js-book1/prompt.png)
 
 - 如果用户单击了 OK 按钮，则 prompt()返回文本输入域的值；如果用户单击了 Cancel 或没有单击 OK 而是通过其他方式关闭了对话框，则该方法返回 null。下面是一个例子。
 
@@ -672,7 +672,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
 - 如果当前脚本在执行过程中会打开两个或多个对话框，那么从第二个对话框开始，每个对话框中都会显示一个复选框，以便用户阻止后续的对话框显示，除非用户刷新页面（见图 8-6）。
 
-  ![](/js-book1/alert2.png)
+  ![](/basic/js-book1/alert2.png)
 
 - 如果用户勾选了其中的复选框，并且关闭了对话框，那么除非用户刷新页面，所有后续的系统对话框（包括警告框、确认框和提示框）都会被屏蔽。
 

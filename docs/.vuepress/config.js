@@ -49,6 +49,9 @@ const webserverSidebar = require("./sidebars/be-konwledge/webserver")
 const databaseSidebar = require("./sidebars/be-konwledge/database")
 const cacheSidebar = require("./sidebars/be-konwledge/cache")
 
+const communitySidebar = require("./sidebars/other/community")
+const softSkillSidebar = require("./sidebars/other/soft-skill")
+
 module.exports = {
   title: "Leo",
   description: "我的前端知识体系",
@@ -279,6 +282,19 @@ module.exports = {
           },
         ],
       },
+      {
+        text: "其他",
+        items: [
+          {
+            text: " 社区发展",
+            items: [{ text: "知识图谱", link: "/other/community/" }],
+          },
+          {
+            text: "软技能",
+            items: [{ text: "知识图谱", link: "/other/soft-skill/" }],
+          },
+        ],
+      },
     ],
     sidebarDepth: 3,
     sidebar: {
@@ -324,6 +340,8 @@ module.exports = {
       "/be-konwledge/webserver/": webserverSidebar,
       "/be-konwledge/database/": databaseSidebar,
       "/be-konwledge/cache/": cacheSidebar,
+      "/other/community/":communitySidebar,
+      "/other/soft-skill/":softSkillSidebar
     },
   },
 }
