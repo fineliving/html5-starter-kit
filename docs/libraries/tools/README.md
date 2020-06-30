@@ -11,6 +11,14 @@
 
 # 书签
 
+Bootstrap,这是一个井段的 bootstrap 布局，要学习
+
+[startbootstrap-simple-sidebar](https://github.com/StartBootstrap/startbootstrap-simple-sidebar)
+
+/Users/liyang/工作/000*北京电信 5G 智能规划/00*工程/架构代码学习
+
+---
+
 [时间戳](<[https://www.baidu.com/s?ie=UTF-8&wd=%E6%97%B6%E9%97%B4%E6%88%B3](https://www.baidu.com/s?ie=UTF-8&wd=时间戳)>)
 
 ---
