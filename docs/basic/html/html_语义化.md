@@ -393,8 +393,6 @@ figure 元素和 aside 元素看起来表达的内容差不多，但是 aside �
 
 ### 参考：
 
-[理解 HTML 语义化](https://www.cnblogs.com/freeyiyi1993/p/3615179.html)
-
-[HTML 5 的革新——语义化标签(一)](http://www.html5jscss.com/html5-semantics-section.html?hypmni=bv0r13)
-
-[HTML 5 的革新——语义化标签(二)](http://www.html5jscss.com/html5-semantics-rich.html)
+- [理解 HTML 语义化](https://www.cnblogs.com/freeyiyi1993/p/3615179.html)
+- [HTML 5 的革新——语义化标签(一)](http://www.html5jscss.com/html5-semantics-section.html?hypmni=bv0r13)
+- [HTML 5 的革新——语义化标签(二)](http://www.html5jscss.com/html5-semantics-rich.html)
