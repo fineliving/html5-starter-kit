@@ -17,6 +17,7 @@ module.exports = [
       '/basic/css-course/analyzing-crp',
       '/basic/css-course/page-speed-rules-and-recommendations',
       '/basic/css-course/http2',
+      '/basic/css-course/resource-prioritization',
     ],
   },
 ]
