@@ -16,6 +16,7 @@ const frameworksSidebar = require('./sidebars/libraries/frameworks')
 
 const networkCommunicationSidebar = require('./sidebars/advance/network-communication')
 const performanceSidebar = require('./sidebars/advance/performance')
+const performanceCourse1Sidebar = require('./sidebars/advance/performance-course1')
 const safetySidebar = require('./sidebars/advance/safety')
 const browserSidebar = require('./sidebars/advance/browser')
 
@@ -143,7 +144,10 @@ module.exports = {
           },
           {
             text: '性能',
-            items: [{ text: '知识图谱', link: '/advance/performance/' }],
+            items: [
+              { text: '知识图谱', link: '/advance/performance/' },
+              { text: 'Google Developers文档', link: '/advance/performance-course1/' },
+            ],
           },
           {
             text: '安全',
@@ -315,6 +319,7 @@ module.exports = {
       '/libraries/frameworks/': frameworksSidebar,
       '/advance/network-communication/': networkCommunicationSidebar,
       '/advance/performance/': performanceSidebar,
+      '/advance/performance-course1': performanceCourse1Sidebar,
       '/advance/safety/': safetySidebar,
       '/advance/browser/': browserSidebar,
       '/engineering/module/': moduleSidebar,

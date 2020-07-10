@@ -33,7 +33,7 @@
 ![DOM 构建流程](https://developers.google.cn/web/fundamentals/performance/critical-rendering-path/images/full-process.png)
 
 1. **转换：** 浏览器从磁盘或网络读取 HTML 的原始字节，并根据文件的指定编码（例如 UTF-8）将它们转换成各个字符。
-2. **令牌化：** 浏览器将字符串转换成 [W3C HTML5 标准](http://www.w3.org/TR/html5/)规定的各种令牌，例如，“<html>”、“<body>”，以及其他尖括号内的字符串。每个令牌都具有特殊含义和一组规则。
+2. **令牌化：** 浏览器将字符串转换成 [W3C HTML5 标准](http://www.w3.org/TR/html5/)规定的各种令牌，例如，“\<html>”、“\<body>”，以及其他尖括号内的字符串。每个令牌都具有特殊含义和一组规则。
 3. **词法分析：** 发出的令牌转换成定义其属性和规则的“对象”。
 4. **DOM 构建：** 最后，由于 HTML 标记定义不同标记之间的关系（一些标记包含在其他标记内），创建的对象链接在一个树数据结构内，此结构也会捕获原始标记中定义的父项-子项关系：*HTML* 对象是 *body* 对象的父项，*body* 是 *paragraph* 对象的父项，依此类推。
 
@@ -84,3 +84,4 @@ CSSOM 为何具有树结构？为页面上的任何对象计算最后一组样�
 ![在 DevTools 中追踪 CSSOM 构建](https://developers.google.cn/web/fundamentals/performance/critical-rendering-path/images/cssom-timeline.png)
 
 我们的小样式表需要大约 0.6 毫秒的处理时间，影响页面上的 8 个元素 — 虽然不多，但同样会产生开销。不过，这 8 个元素从何而来呢？CSSOM 和 DOM 是独立的数据结构！结果证明，浏览器隐藏了一个重要步骤。接下来，让我们谈一谈将 DOM 与 CSSOM 关联在一起的[渲染树](https://developers.google.cn/web/fundamentals/performance/critical-rendering-path/render-tree-construction)。
+
