@@ -4,7 +4,7 @@
 
 浏览器第一次加载网页时，会将页面资源存储在 [HTTP Cache](https://developers.google.cn/web/fundamentals/performance/optimizing-content-efficiency/http-caching) 中。下次浏览器访问该页面时，它可以在高速缓存中查找以前获取的资源，然后从磁盘检索它们，其速度通常比从网络上下载它们的速度快。
 
-虽然HTTP缓存是根据[Internet工程任务组（IETF）规范进行](https://tools.ietf.org/html/rfc7234)标准化的 ，但浏览器可能具有多个缓存，这些缓存在获取，存储和保留内容的方式上有所不同。您可以在这篇出色的文章[《四个缓存的故事》中](https://calendar.perfplanet.com/2016/a-tale-of-four-caches/)了解这些缓存的变化方式 。
+虽然HTTP缓存是根据 [Internet Engineering Task Force (IETF) specifications](https://tools.ietf.org/html/rfc7234)标准化的 ，但浏览器可能具有多个缓存，这些缓存在获取，存储和保留内容的方式上有所不同。您可以在这篇出色的文章[A Tale of Four Caches](https://calendar.perfplanet.com/2016/a-tale-of-four-caches/)中了解这些缓存的变化方式 。
 
 当然，您页面的每个首次访问者都不会为该页面缓存任何内容。即使是重复访问者，HTTP缓存中的资源也可能很少。他们可能已经手动清除了该文件，或者将其浏览器设置为自动清除，或者使用控制键组合强制重新加载了新页面。尽管如此，您的大量用户仍可以使用至少一些已缓存的组件来重新访问您的站点，这可能会大大缩短加载时间。最大化缓存使用率对于加快回访至关重要。
 
@@ -16,7 +16,7 @@
 
 ## 缓存头
 
-缓存头的两种主要类型分别是cache [-control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) 和 [expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires)，它们定义资源的缓存特征。通常，缓存控制被认为是一种比到期更为现代和灵活的方法，但是两个标头可以同时使用。
+缓存头的两种主要类型分别是 [cache-control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) 和 [expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires)，它们定义资源的缓存特征。通常，缓存控制被认为是一种比到期更为现代和灵活的方法，但是两个标头可以同时使用。
 
 缓存标头应用于服务器级别的资源（例如，在`.htaccess` Apache服务器上的文件中，几乎所有活动网站的一半都在使用该文件）来设置其缓存特征。通过标识资源或资源类型（例如图像或CSS文件），然后使用所需的缓存选项指定资源的标头来启用缓存。
 
@@ -24,7 +24,7 @@
 
 您可以使用逗号分隔列表中的各种选项来启用缓存控制。这是一个Apache `.htaccess`配置示例，该示例将与扩展列表匹配的各种图像文件类型的缓存设置为一个月并具有公共访问权限（一些可用选项在下面讨论）。
 
-```
+```html
 <filesMatch ".(ico|jpg|jpeg|png|gif)$">
  Header set Cache-Control "max-age=2592000, public"
 </filesMatch>
@@ -32,13 +32,13 @@
 
 本示例将样式和脚本（可能比图像更可能更改的资源）的缓存设置为一日和公众访问。
 
-```
+```html
 <filesMatch ".(css|js)$">
  Header set Cache-Control "max-age=86400, public"
 </filesMatch>
 ```
 
-缓存控制具有许多选项，通常称为*指令*，可以设置这些选项以专门确定如何处理缓存请求。下面解释一些常见的指令；您可以在“ [性能优化”部分](http://tinyurl.com/ljgcqp3)和 [Mozilla开发人员网络中](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)找到更多信息 。
+缓存控制具有许多选项，通常称为*指令*，可以设置这些选项以专门确定如何处理缓存请求。下面解释一些常见的指令；您可以在 [Performance Optimization section](http://tinyurl.com/ljgcqp3)和  [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) 中找到更多信息 。
 
 - **no-cache**：有点用词不当，它指定可以缓存内容，但是，如果这样，则必须在每个请求上重新验证内容，然后才将其提供给客户端。这迫使客户端检查新鲜度，但允许客户端避免在资源未更改的情况下再次下载资源。与**无商店**互斥。
 - **no-store**：指示实际上任何主缓存或中间缓存都不能以任何方式缓存内容。对于可能包含敏感数据的资源，或几乎每次访问都会改变的资源，这是一个很好的选择。与**no-cache**互斥。
@@ -78,4 +78,5 @@ ExpiresDefault "access plus 2 days"
 
 缓存是提高页面加载速度，从而提高用户体验的可靠且省力的方法。它足够强大，可以为特定的内容类型提供细微差别，但是足够灵活，可以在网站内容更改时轻松进行更新。
 
-对缓存要有主见，但也要注意，如果以后更改具有较长保留期的资源，可能会无意间使一些重复访问者失去较新的内容。您可以在“ [缓存最佳实践”和“最大寿命”中](https://jakearchibald.com/2016/caching-best-practices/)找到有关缓存模式，选项和潜在陷阱的精彩讨论 。
+对缓存要有主见，但也要注意，如果以后更改具有较长保留期的资源，可能会无意间使一些重复访问者失去较新的内容。您可以在 [Caching Best Practices and Max-age Gotchas](https://jakearchibald.com/2016/caching-best-practices/)中找到有关缓存模式，选项和潜在陷阱的精彩讨论 。
+

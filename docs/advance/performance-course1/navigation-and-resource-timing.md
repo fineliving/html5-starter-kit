@@ -1,8 +1,8 @@
-# 通过导航和资源定时评估现实生活中的加载性能
+# 通过导航和资源定时评估加载性能
 
-您很有可能在某个时候打开了浏览器的开发工具，[使用了网络面板](https://developers.google.cn/web/tools/chrome-devtools/network-performance)（甚至可能是 [Lighthouse](https://developers.google.cn/web/tools/lighthouse)）来评估性能，并发现了改进的机会。然后，您重构了代码，提高了性能，观看了指标的改进，并向自己表示了祝贺。做得好！
+您很有可能在某个时候打开了浏览器的开发工具，使用[network panel](https://developers.google.cn/web/tools/chrome-devtools/network-performance)（甚至可能是 [Lighthouse](https://developers.google.cn/web/tools/lighthouse)）来评估性能，并发现了改进的机会。然后，您重构了代码，提高了性能，观看了指标的改进，并向自己表示了祝贺。做得好！
 
-只有您还*没有*完成，因为问题仍然存在：您执行的测试是[*综合*](https://developers.google.cn/web/fundamentals/performance/speed-tools#lab_data)测试 。他们没有告诉您您的网站[在该领域](https://developers.google.cn/web/fundamentals/performance/speed-tools#field_data)对[真实用户的](https://developers.google.cn/web/fundamentals/performance/speed-tools#field_data)表现如何。
+只有您还*没有*完成，因为问题仍然存在：您执行的测试是[synthetic](https://developers.google.cn/web/fundamentals/performance/speed-tools#lab_data)测试 。他们没有告诉您您的网站[在该领域](https://developers.google.cn/web/fundamentals/performance/speed-tools#field_data)对[真实用户的](https://developers.google.cn/web/fundamentals/performance/speed-tools#field_data)表现如何。
 
 并不是说综合测试很*糟糕*，而是它只是更大的加载性能图的一部分。不管您使用多少个综合测试工具，它们都只能从一个角度提供数据：从任何设备和网络连接运行测试。当然，基于综合测试建议所做的改进将对所有用户有所帮助，但是只要综合测试仍然是您唯一的性能衡量策略，您在*多大程度上*都不了解。
 

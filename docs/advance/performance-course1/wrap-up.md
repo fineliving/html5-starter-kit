@@ -4,9 +4,9 @@
 
 为了证明该技术的有效性，我们将在不同的网页版本上进行各种速度测试，从没有进行优化开始，一直到我们已经讨论过的一些加速技术进行，特别是文本资源优化，图形资源优化和HTTP请求减少。
 
-最初的目标是一个简单的单一HTML页面，其中包含文本，图像，CSS和JavaScript，位于Firebase上，[网址为](https://page-load-speed-demo.firebaseapp.com/pageload0.html)：[https](https://page-load-speed-demo.firebaseapp.com/pageload0.html) ://page-load-speed-demo.firebaseapp.com/pageload0.html 。快速浏览一下，然后我们就可以对其进行改进。
+最初的目标是一个简单的单一HTML页面，其中包含文本，图像，CSS和JavaScript，位于Firebase上，网址为：[https://page-load-speed-demo.firebaseapp.com/pageload0.html](https://page-load-speed-demo.firebaseapp.com/pageload0.html) 。快速浏览一下，然后我们就可以对其进行改进。
 
-**注意：**本文档中引用的所有版本的演示页面的源代码都可以在[此GitHub存储库中](https://github.com/GoogleChromeLabs/FastPageLoadDemo)找到。
+**注意：**本文档中引用的所有版本的演示页面的源代码都可以在此[GitHub repository](https://github.com/GoogleChromeLabs/FastPageLoadDemo)找到。
 
 页面速度的主要考虑因素之一是First Meanfulful Paint（FMP），它是衡量用户对页面性能的感知程度的指标。FMP是指页面主要内容显示在屏幕上所花费的时间。当然，“主要内容”的定义可以根据页面类型而有所不同。对于新闻报道，主要内容可能是标题和“首屈一指”的文字；对于搜索引擎页面，主要内容将是其搜索结果；对于美术馆页面，主要内容可能是一系列缩略图和简短说明。
 
@@ -18,9 +18,9 @@
 
 有很多工具可用来帮助确定页面的加载速度，此处未列出太多工具。对于本文，我们将使用三种在线服务来帮助我们查看改进工作的结果。
 
-- [Google PageSpeed见解](http://tinyurl.com/m65jex6)
+- [Google PageSpeed Insights](http://tinyurl.com/m65jex6)
 - [WebPageTest](https://www.webpagetest.org/)
-- [平度](https://tools.pingdom.com/)
+- [[Pingdom](https://tools.pingdom.com/)](https://tools.pingdom.com/)
 
 为什么要使用三种工具？因为不同的测试服务使用不同的方法和算法来测试速度；他们在不同位置的不同机器和浏览器上运行测试；他们报告不同的结果，并以不同的方式报告它们。您可能会发现，使同一页面在各种工具之间进行完全不同的测试令人感到不安，但这就是测试的现实。
 
@@ -84,9 +84,9 @@ WebPageTest还包括许多图形报告，包括幻灯片和视频视图（两者
 
 有趣的是，尽管没有整体提高原始速度，但WebPageTest的报告显示其内部算法的两个结果朝不同的方向发展。该页面的“速度指数”从1699年增加到1797年（慢了5％），其“首次互动”时间（测试版功能）从1.266秒减少到1.133秒（快了10％）。尽管这些测量值有些主观，但它们仍会影响用户对网站的感知速度。并始终记住，*用户感知*是性能的最终仲裁者。
 
-**更新：**即将弃用的“首次互动时间”指标将采用更准确的“持续互动时间”。我们鼓励您使用 [WebPageTest Easy模式](https://webpagetest.org/easy)并选择Mobile复选框，这将生成Lighthouse报告。然后，单击页面顶部的*Lighthouse PWA分数*以查看完整的Lighthouse Progressive Web App报告，包括新的“持续交互”指标。
+**更新：**即将弃用的“首次互动时间”指标将采用更准确的“持续互动时间”。我们鼓励您使用  [WebPageTest Easy mode](https://webpagetest.org/easy) 并选择Mobile复选框，这将生成Lighthouse报告。然后，单击页面顶部的*Lighthouse PWA分数*以查看完整的Lighthouse Progressive Web App报告，包括新的“持续交互”指标。
 
-这是文本最小化的版本：[https](https://page-load-speed-demo.firebaseapp.com/pageload1.html) ://page-load-speed-demo.firebaseapp.com/pageload1.html 。
+这是文本最小化的版本：[https://page-load-speed-demo.firebaseapp.com/pageload1.html ](https://page-load-speed-demo.firebaseapp.com/pageload1.html) 。
 
 ## 图形内容
 
@@ -149,7 +149,7 @@ Pingdom的时间轴报告还显示了图像的等待/加载时间的显着改善
 
 ![WebPageTest，优化图像](https://developers.google.cn/web/fundamentals/performance/get-started/images/image_714.png) *WebPageTest，优化图像*
 
-这是经过图像优化的版本：[https](https://page-load-speed-demo.firebaseapp.com/pageload2.html) : [//page-load-speed-demo.firebaseapp.com/pageload2.html](https://page-load-speed-demo.firebaseapp.com/pageload2.html)。
+这是经过图像优化的版本：[https://page-load-speed-demo.firebaseapp.com/pageload2.html](https://page-load-speed-demo.firebaseapp.com/pageload2.html)。
 
 ## HTTP请求
 
@@ -189,7 +189,7 @@ Pingdom的时间轴报告还显示了图像的等待/加载时间的显着改善
 
 更有趣的是“请求”图表。同样，虽然图像请求的数量实际上减少了63％，但图像请求的数量*在总请求中所占的比例* 却仅比原始*请求*少（从53.3％降至50.0％）。为什么？因为HTML，CSS和JavaScript请求（现在已经合并了它们的资源，并且减少了请求数）在总请求中所占的比例更大，这表明HTTP请求的总体减少已使竞争环境趋于公平。图像不再那么沉重。换句话说，在此版本中，浏览器加载图像的服务器命中次数不会超过加载*所有其他资源的总和*。
 
-这是简化的HTTP请求版本：[https](https://page-load-speed-demo.firebaseapp.com/pageload3.html) : [//page-load-speed-demo.firebaseapp.com/pageload3.html](https://page-load-speed-demo.firebaseapp.com/pageload3.html)。
+这是简化的HTTP请求版本：[https://page-load-speed-demo.firebaseapp.com/pageload3.html](https://page-load-speed-demo.firebaseapp.com/pageload3.html)。
 
 ## 现在都在一起了
 
@@ -213,7 +213,7 @@ Pingdom的时间轴报告还显示了图像的等待/加载时间的显着改善
 
 ![WebPageTest，所有技术](https://developers.google.cn/web/fundamentals/performance/get-started/images/image_722.png) *WebPageTest，所有技术*
 
-这是所有技术的版本：[https](https://page-load-speed-demo.firebaseapp.com/pageload4.html) : [//page-load-speed-demo.firebaseapp.com/pageload4.html](https://page-load-speed-demo.firebaseapp.com/pageload4.html)。
+这是所有技术的版本：[https://page-load-speed-demo.firebaseapp.com/pageload4.html](https://page-load-speed-demo.firebaseapp.com/pageload4.html) 。
 
 ## 摘要
 
