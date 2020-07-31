@@ -84,7 +84,7 @@ module.exports = {
             text: 'HTML(5)',
             items: [
               { text: '知识图谱', link: '/basic/html/' },
-              { text: 'javascript高级程序设计', link: '/basic/html-course1/' },
+              { text: '教程', link: '/basic/html-course1/' },
             ],
           },
           {
