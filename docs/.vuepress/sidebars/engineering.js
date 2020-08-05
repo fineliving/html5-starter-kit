@@ -1,22 +1,52 @@
-// // CSS(3)的知识图谱
-// module.exports = [
-//   {
-//     title: 'HTML(5)', // 必要的
-//     path: '/basic/html/', // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-//     // collapsable: false, // 可选的, 默认值是 true,
-//     sidebarDepth: 1, // 可选的, 默认值是 1
-//     children: ['/basic/html/html代码规范', '/basic/html/html_语义化'],
-//   },
-//   {
-//     title: 'CSS(3)',
-//     path: '/basic/css/',
-//     sidebarDepth: 1,
-//     children: ['/basic/css/css代码规范'],
-//   },
-//   {
-//     title: 'JavaScript(ES6+)',
-//     path: '/basic/js/',
-//     sidebarDepth: 1,
-//     children: [],
-//   },
-// ]
+// 工程开发
+module.exports = [
+  // '/engineering/',
+  {
+    title: '模块化',
+    path: '/engineering/module/',
+    sidebarDepth: 1,
+    children: [],
+  },
+  {
+    title: '版本管理',
+    path: '/engineering/version/',
+    sidebarDepth: 1,
+    children: [],
+  },
+  {
+    title: '依赖管理',
+    path: '/engineering/dependence/',
+    sidebarDepth: 1,
+    children: [],
+  },
+  {
+    title: '语言增强',
+    path: '/engineering/semantic-enhancement/',
+    sidebarDepth: 1,
+    children: [],
+  },
+  {
+    title: '构建工具',
+    path: '/engineering/build-tool/',
+    sidebarDepth: 1,
+    children: [],
+  },
+  {
+    title: '转换器',
+    path: '/engineering/converter/',
+    sidebarDepth: 1,
+    children: [],
+  },
+  {
+    title: 'CI/CD',
+    path: '/engineering/ci-cd/',
+    sidebarDepth: 1,
+    children: [],
+  },
+  {
+    title: '代码质量',
+    path: '/engineering/code-quality/',
+    sidebarDepth: 1,
+    children: [],
+  },
+]

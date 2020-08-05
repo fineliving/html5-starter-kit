@@ -1,10 +1,3 @@
-# CSS(3)
-
-- [CSSOM](https://developer.mozilla.org/zh-CN/docs/Web/API/CSS_Object_Model)
-- [选择器](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors)
-- [布局](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout)
-- [交互](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-
 # 书签
 
 颜色识别网站

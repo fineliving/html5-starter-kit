@@ -1,11 +1,3 @@
-# 调试工具的知识图谱
-
-- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
-- [Firebug](https://getfirebug.com/)
-- [Postman](https://www.getpostman.com/)
-- [Fiddler](https://www.telerik.com/fiddler)
-- [Charles](https://www.charlesproxy.com/)
-
 # 书签
 
 [谷歌助手](<[https://www.baidu.com/s?ie=UTF-8&wd=%E8%B0%B7%E6%AD%8C%E5%8A%A9%E6%89%8B](https://www.baidu.com/s?ie=UTF-8&wd=谷歌助手)>)

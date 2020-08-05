@@ -10,6 +10,8 @@ const principleSidebar = require('./sidebars/principle')
 const backEndSidebar = require('./sidebars/backEnd')
 const otherSidebar = require('./sidebars/other')
 
+const tutorialSidebar = require('./sidebars/tutorial')
+
 // const htmlSidebar = require('./sidebars/basic/html')
 // const htmlCourse1Sidebar = require('./sidebars/basic/html-course1')
 // const cssSidebar = require('./sidebars/basic/css')
@@ -17,7 +19,7 @@ const otherSidebar = require('./sidebars/other')
 // const cssCourseSidebar = require('./sidebars/basic/css-course')
 // const jsSidebar = require('./sidebars/basic/js')
 // const jsCourse1Sidebar = require('./sidebars/basic/js-course1')
-// const jsBook1Sidebar = require('./sidebars/basic/js-book1')
+// const jsBook1Sidebar = require('./sidebars/tutorial/book/professionalJs')
 
 // const editorSidebar = require('./sidebars/software/editor')
 // const debugSidebar = require('./sidebars/software/debug')
@@ -90,7 +92,7 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: '技能图谱',
+        text: '知识·图谱',
         items: [
           { text: '编程基础', link: '/basic/' },
           { text: '开发软件', link: '/software/' },
@@ -104,6 +106,10 @@ module.exports = {
           { text: '后端知识', link: '/backEnd/' },
           { text: '软技能', link: '/other/' },
         ],
+      },
+      {
+        text: '书籍·教程',
+        link: '/tutorial/',
       },
       // {
       //   text: '编程基础',
@@ -128,7 +134,7 @@ module.exports = {
       //       items: [
       //         { text: '知识图谱', link: '/basic/js/' },
       //         { text: '教程——技术胖ES6', link: '/basic/js-course1/' },
-      //         { text: '书籍——javascript高级程序设计', link: '/basic/js-book1/' },
+      //         { text: '书籍——javascript高级程序设计', link: '/tutorial/book/professionalJs/' },
       //       ],
       //     },
       //   ],
@@ -343,6 +349,7 @@ module.exports = {
       '/principle/': principleSidebar,
       '/backEnd/': backEndSidebar,
       '/other/': otherSidebar,
+      '/tutorial/': tutorialSidebar,
       // '/basic/html/': htmlSidebar,
       // '/basic/html-course1/': htmlCourse1Sidebar,
       // '/basic/css/': cssSidebar,
@@ -350,7 +357,7 @@ module.exports = {
       // '/basic/css-course/': cssCourseSidebar,
       // '/basic/js/': jsSidebar,
       // '/basic/js-course1/': jsCourse1Sidebar,
-      // '/basic/js-book1/': jsBook1Sidebar,
+      // '/tutorial/book/professionalJs/': jsBook1Sidebar,
       // '/software/editor/': editorSidebar,
       // '/software/debug/': debugSidebar,
       // '/software/slice/': sliceSidebar,

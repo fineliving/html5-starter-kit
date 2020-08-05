@@ -1,14 +1,3 @@
-# 工具库知识图谱
-
-- [jQuery](https://jquery.com/)
-- [Zepto](https://zeptojs.com/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Prototype](http://api.prototypejs.org/)
-- [Underscore](https://underscorejs.org/)
-- [Lodash](https://lodash.com/)
-- [RxJS](https://rxjs-dev.firebaseapp.com/)
-- [moment](https://momentjs.com/)
-
 # 书签
 
 Bootstrap,这是一个井段的 bootstrap 布局，要学习

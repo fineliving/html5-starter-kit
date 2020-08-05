@@ -53,7 +53,7 @@ window.sayAge() //29
 
 ```js
 var age = 29
-window.color = "red"
+window.color = 'red'
 
 //在IE < 9 时抛出错误，在其他所有浏览器中都返回false
 delete window.age
@@ -124,7 +124,7 @@ Windows Mobile 平台的 IE 浏览器不允许通过 window.property = value 之
 
 - 图 8-1 展示了在最高层窗口中，通过代码来访问前面例子中每个框架的不同方式。
 
-  ![frameVisit](/basic/js-book1/frameVisit.png)
+  ![frameVisit](/tutorial/book/professionalJs/frameVisit.png)
 
 **_3. parent 对象_**
 
@@ -171,7 +171,7 @@ Windows Mobile 平台的 IE 浏览器不允许通过 window.property = value 之
 
   - 图 8-2 展示了在将前面例子加载到浏览器之后，不同 window 对象的值。
 
-    ![frameWindow](/basic/js-book1/frameWindow.png)
+    ![frameWindow](/tutorial/book/professionalJs/frameWindow.png)
 
 注意，**除非最高层窗口是通过 window.open()打开的**（本章后面将会讨论），否则其 window 对象的 name 属性不会包含任何值。
 
@@ -205,9 +205,9 @@ Windows Mobile 平台的 IE 浏览器不允许通过 window.property = value 之
 - 使用下列代码可以跨浏览器取得窗口左边和上边的位置。
 
   ```js
-  var leftPos = typeof window.screenLeft == "number" ? window.screenLeft : window.screenX
+  var leftPos = typeof window.screenLeft == 'number' ? window.screenLeft : window.screenX
 
-  var topPos = typeof window.screenTop == "number" ? window.screenTop : window.screenY
+  var topPos = typeof window.screenTop == 'number' ? window.screenTop : window.screenY
   ```
 
   - 这个例子运用二元操作符首先确定 screenLeft 和 screenTop 属性是否存在，如果是（在 IE、Safari、Opera 和 Chrome 中），则取得这两个属性的值。如果不存在（在 Firefox 中），则取得 screenX 和 screenY 的值。
@@ -273,8 +273,8 @@ Windows Mobile 平台的 IE 浏览器不允许通过 window.property = value 之
   var pageWidth = window.innerWidth,
     pageHeight = window.innerHeight
 
-  if (typeof pageWidth != "number") {
-    if (document.compatMode == "CSS1Compat") {
+  if (typeof pageWidth != 'number') {
+    if (document.compatMode == 'CSS1Compat') {
       pageWidth = document.documentElement.clientWidth
       pageHeight = document.documentElement.clientHeight
     } else {
@@ -339,7 +339,7 @@ Windows Mobile 平台的 IE 浏览器不允许通过 window.property = value 之
 
   ```js
   //等同于< a href="http://www.wrox.com" target="topFrame"></a>
-  window.open("http://www.wrox.com/", "topFrame")
+  window.open('http://www.wrox.com/', 'topFrame')
   ```
 
   - 调用这行代码，就如同用户单击了 href 属性为http://www.wrox.com/，target 属性为"topFrame"的链接。
@@ -372,7 +372,7 @@ Windows Mobile 平台的 IE 浏览器不允许通过 window.property = value 之
 - 表中所列的部分或全部设置选项，都可以通过逗号分隔的名值对列表来指定。其中，名值对以等号表示（注意，整个特性字符串中不允许出现空格），如下面的例子所示。
 
   ```js
-  window.open("http://www.wrox.com/", "wroxWindow", "height=400,width=400,top=10,left=10,resizable=yes")
+  window.open('http://www.wrox.com/', 'wroxWindow', 'height=400,width=400,top=10,left=10,resizable=yes')
   ```
 
   - 这行代码会打开一个新的可以调整大小的窗口，窗口初始大小为 400×400 像素，并且距屏幕上沿和左边各 10 像素。
@@ -382,7 +382,7 @@ window.open()方法会**返回一个指向新窗口的引用**。引用的对象
 - 例如，有些浏览器在默认情况下可能不允许我们针对主浏览器窗口调整大小或移动位置，但却允许我们针对通过 window.open()创建的窗口调整大小或移动位置。通过这个返回的对象，可以像操作其他窗口一样操作新打开的窗口，如下所示。
 
   ```js
-  var wroxWin = window.open("http://www.wrox.com/", "wroxWindow", "height=400,width=400,top=10,left=10,resizable=yes") //调整大小  wroxWin.resizeTo(**500**,**500**);     //移动位置  wroxWin.moveTo(**100**,**100**);
+  var wroxWin = window.open('http://www.wrox.com/', 'wroxWindow', 'height=400,width=400,top=10,left=10,resizable=yes') //调整大小  wroxWin.resizeTo(**500**,**500**);     //移动位置  wroxWin.moveTo(**100**,**100**);
   ```
 
 - 调用 close()方法还可以关闭新打开的窗口。
@@ -405,7 +405,7 @@ window.open()方法会**返回一个指向新窗口的引用**。引用的对象
 - - 例如：
 
     ```js
-    var wroxWin = window.open("http://www.wrox.com/", "wroxWindow", "height=400,width=400,top=10,left=10,resizable=yes")
+    var wroxWin = window.open('http://www.wrox.com/', 'wroxWindow', 'height=400,width=400,top=10,left=10,resizable=yes')
 
     wroxWin.opener = null
     ```
@@ -419,7 +419,7 @@ window.open()方法会**返回一个指向新窗口的引用**。引用的对象
   - 在 Chrome 中，将新创建的标签页的 opener 属性设置为 null，即表示在单独的进程中运行新标签页，如下所示。
 
     ```js
-    var wroxWin = window.open("http://www.wrox.com/", "wroxWindow", "height=400,width=400,top=10,left=10,resizable=yes")
+    var wroxWin = window.open('http://www.wrox.com/', 'wroxWindow', 'height=400,width=400,top=10,left=10,resizable=yes')
 
     wroxWin.opener = null
     ```
@@ -453,9 +453,9 @@ window.open()方法会**返回一个指向新窗口的引用**。引用的对象
 - - 如果是浏览器内置的屏蔽程序阻止的弹出窗口，那么 window.open()很可能会返回 null。此时，只要检测这个返回的值就可以确定弹出窗口是否被屏蔽了，如下面的例子所示。
 
     ```js
-    var wroxWin = window.open("http://www.wrox.com", "_blank")
+    var wroxWin = window.open('http://www.wrox.com', '_blank')
     if (wroxWin == null) {
-      alert("The popup was blocked!")
+      alert('The popup was blocked!')
     }
     ```
 
@@ -467,7 +467,7 @@ window.open()方法会**返回一个指向新窗口的引用**。引用的对象
     var blocked = false
 
     try {
-      var wroxWin = window.open("http://www.wrox.com", "_blank")
+      var wroxWin = window.open('http://www.wrox.com', '_blank')
       if (wroxWin == null) {
         blocked = true
       }
@@ -476,7 +476,7 @@ window.open()方法会**返回一个指向新窗口的引用**。引用的对象
     }
 
     if (blocked) {
-      alert("The popup was blocked!")
+      alert('The popup was blocked!')
     }
     ```
 
@@ -501,7 +501,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
   //推荐的调用方式
   setTimeout(function() {
-    alert("Hello world!")
+    alert('Hello world!')
   }, 1000)
   ```
 
@@ -524,7 +524,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
     ```js
     //设置超时调用
     var timeoutId = setTimeout(function() {
-      alert("Hello world!")
+      alert('Hello world!')
     }, 1000)
 
     //注意：把它取消
@@ -548,7 +548,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
   //推荐的调用方式
   setInterval(function() {
-    alert("Hello world!")
+    alert('Hello world!')
   }, 10000)
   ```
 
@@ -569,7 +569,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
       //如果执行次数达到了max 设定的值，则取消后续尚未执行的调用
       if (num == max) {
         clearInterval(intervalId)
-        alert("Done")
+        alert('Done')
       }
     }
 
@@ -591,7 +591,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
         if (num < max) {
           setTimeout(incrementNumber, 500)
         } else {
-          alert("Done")
+          alert('Done')
         }
       }
 
@@ -620,7 +620,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
 - 具体来说，调用 alert()方法的结果就是向用户显示一个系统对话框，其中包含指定的文本和一个 OK（“确定”）按钮。例如，alert("Hello world!")会在 Windows XP 系统的 IE 中生成如图 8-3 所示的对话框。
 
-  ![](/basic/js-book1/alert.png)
+  ![](/tutorial/book/professionalJs/alert.png)
 
 - 通常使用 alert()生成的“警告”对话框向用户显示一些他们无法控制的消息，例如错误消息。而用户只能在看完消息后关闭对话框。
 
@@ -630,12 +630,12 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
 - 从向用户显示消息的方面来看，这种“确认”对话框很像是一个“警告”对话框。但二者的主要区别在于“确认”对话框除了显示 OK 按钮外，还会显示一个 Cancel（“取消”）按钮，两个按钮可以让用户决定是否执行给定的操作。例如，confirm("Are yousure?")会显示如图 8-4 所示的确认对话框。
 
-  ![](/basic/js-book1/confirm.png)
+  ![](/tutorial/book/professionalJs/confirm.png)
 
 - 为了确定用户是单击了 OK 还是 Cancel，可以检查 confirm()方法返回的布尔值：true 表示单击了 OK，false 表示单击了 Cancel 或单击了右上角的 X 按钮。确认对话框的典型用法如下。
 
   ```js
-  if (confirm("Are you sure?")) {
+  if (confirm('Are you sure?')) {
     alert("I'm so glad you're sure! ")
   } else {
     alert("I'm sorry to hear you're not sure. ")
@@ -653,14 +653,14 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
 - prompt()方法接受两个参数：要显示给用户的文本提示和文本输入域的默认值（可以是一个空字符串）。调用 prompt("What's your name?","Michael")会得到如图 8-5 所示的对话框。
 
-  ![](/basic/js-book1/prompt.png)
+  ![](/tutorial/book/professionalJs/prompt.png)
 
 - 如果用户单击了 OK 按钮，则 prompt()返回文本输入域的值；如果用户单击了 Cancel 或没有单击 OK 而是通过其他方式关闭了对话框，则该方法返回 null。下面是一个例子。
 
   ```js
-  var result = prompt("What is your name? ", "")
+  var result = prompt('What is your name? ', '')
   if (result !== null) {
-    alert("Welcome, " + result)
+    alert('Welcome, ' + result)
   }
   ```
 
@@ -672,7 +672,7 @@ JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间
 
 - 如果当前脚本在执行过程中会打开两个或多个对话框，那么从第二个对话框开始，每个对话框中都会显示一个复选框，以便用户阻止后续的对话框显示，除非用户刷新页面（见图 8-6）。
 
-  ![](/basic/js-book1/alert2.png)
+  ![](/tutorial/book/professionalJs/alert2.png)
 
 - 如果用户勾选了其中的复选框，并且关闭了对话框，那么除非用户刷新页面，所有后续的系统对话框（包括警告框、确认框和提示框）都会被屏蔽。
 
@@ -734,11 +734,11 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
   ```js
   function getQueryStringArgs() {
     //取得查询字符串并去掉开头的问号
-    var qs = location.search.length > 0 ? location.search.substring(1) : "",
+    var qs = location.search.length > 0 ? location.search.substring(1) : '',
       //保存数据的对象
       args = {},
       //取得每一项
-      items = qs.length ? qs.split("&") : [],
+      items = qs.length ? qs.split('&') : [],
       item = null,
       name = null,
       value = null,
@@ -748,7 +748,7 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
 
     //逐个将每一项添加到args 对象中
     for (i = 0; i < len; i++) {
-      item = items[i].split("=")
+      item = items[i].split('=')
       name = decodeURIComponent(item[0])
       value = decodeURIComponent(item[1])
 
@@ -779,8 +779,8 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
 
     var args = getQueryStringArgs()
 
-    alert(args["q"]) //"javascript"
-    alert(args["num"]) //"10"
+    alert(args['q']) //"javascript"
+    alert(args['num']) //"10"
     ```
 
 - 可见，每个查询字符串参数都成了返回对象的属性。这样就极大地方便了对每个参数的访问。
@@ -794,7 +794,7 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
 1. 首先，也是最常用的方式，就是使用**assign()方法**并为其传递一个 URL，如下所示。
 
    ```js
-   location.assign("http://www.wrox.com")
+   location.assign('http://www.wrox.com')
    ```
 
    - 这样，就可以立即打开新 URL 并在浏览器的历史记录中生成一条记录。
@@ -802,8 +802,8 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
 2. 如果是将**location.href 或 window.location** 设置为一个 URL 值，也会以该值调用 assign()方法。例如：
 
    ```js
-   window.location = "http://www.wrox.com"
-   location.href = "http://www.wrox.com"
+   window.location = 'http://www.wrox.com'
+   location.href = 'http://www.wrox.com'
    ```
 
    - 下列两行代码与显式调用 assign()方法的效果完全一样。
@@ -815,16 +815,16 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
    //假设初始URL 为http://www.wrox.com/WileyCDA/
 
    //将URL 修改为"http://www.wrox.com/WileyCDA/#section1"
-   location.hash = "#section1"
+   location.hash = '#section1'
 
    //将URL 修改为"http://www.wrox.com/WileyCDA/?q=javascript"
-   location.search = "?q=javascript"
+   location.search = '?q=javascript'
 
    //将URL 修改为"http://www.yahoo.com/WileyCDA/"
-   location.hostname = "www.yahoo.com"
+   location.hostname = 'www.yahoo.com'
 
    //将URL 修改为"http://www.yahoo.com/mydir/"
-   location.pathname = "mydir"
+   location.pathname = 'mydir'
 
    //将URL 修改为"http://www.yahoo.com:8080/WileyCDA/"
    location.port = 8080
@@ -852,7 +852,7 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
       <p>Enjoy this page for a second, because you won't be coming back here.</p>
       <script type="text/javascript">
         setTimeout(function() {
-          location.replace("http://www.wrox.com/")
+          location.replace('http://www.wrox.com/')
         }, 1000)
       </script>
     </body>
@@ -958,10 +958,10 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
   }
 
   //检测Flash
-  alert(hasPlugin("Flash"))
+  alert(hasPlugin('Flash'))
 
   //检测QuickTime
-  alert(hasPlugin("QuickTime"))
+  alert(hasPlugin('QuickTime'))
   ```
 
   - 这个 hasPlugin()函数接受一个参数：要检测的插件名。
@@ -997,10 +997,10 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
   }
 
   //检测Flash
-  alert(hasIEPlugin("ShockwaveFlash.ShockwaveFlash"))
+  alert(hasIEPlugin('ShockwaveFlash.ShockwaveFlash'))
 
   //检测QuickTime
-  alert(hasIEPlugin("QuickTime.QuickTime"))
+  alert(hasIEPlugin('QuickTime.QuickTime'))
   ```
 
   - 在这个例子中，函数 hasIEPlugin()只接收一个 COM 标识符作为参数。
@@ -1014,18 +1014,18 @@ location 是最有用的 BOM 对象之一，它**提供了与当前窗口中加�
 ```js
 //检测所有浏览器中的Flash
 function hasFlash() {
-  var result = hasPlugin("Flash")
+  var result = hasPlugin('Flash')
   if (!result) {
-    result = hasIEPlugin("ShockwaveFlash.ShockwaveFlash")
+    result = hasIEPlugin('ShockwaveFlash.ShockwaveFlash')
   }
   return result
 }
 
 //检测所有浏览器中的QuickTime
 function hasQuickTime() {
-  var result = hasPlugin("QuickTime")
+  var result = hasPlugin('QuickTime')
   if (!result) {
-    result = hasIEPlugin("QuickTime.QuickTime")
+    result = hasIEPlugin('QuickTime.QuickTime')
   }
   return result
 }
@@ -1064,7 +1064,7 @@ Firefox 2 为 navigator 对象新增了 registerContentHandler()和 registerProt
   - 举个例子，要将一个站点注册为处理 RSS 源的处理程序，可以使用如下代码。
 
     ```js
-    navigator.registerContentHandler("application/rss+xml", "http://www.somereader.com?feed=%s", "Some Reader")
+    navigator.registerContentHandler('application/rss+xml', 'http://www.somereader.com?feed=%s', 'Some Reader')
     ```
 
     - 第一个参数是 RSS 源的 MIME 类型。
@@ -1085,7 +1085,7 @@ Firefox 2 为 navigator 对象新增了 registerContentHandler()和 registerProt
   - 例如，要想将一个应用程序注册为默认的邮件客户端，可以使用如下代码。
 
     ```js
-    navigator.registerProtocolHandler("mailto", "http://www.somemailclient.com?cmd=%s", "Some Mail Client")
+    navigator.registerProtocolHandler('mailto', 'http://www.somemailclient.com?cmd=%s', 'Some Mail Client')
     ```
 
     - 这个例子注册了一个 mailto 协议的处理程序，该程序指向一个基于 Web 的电子邮件客户端。
@@ -1171,10 +1171,10 @@ history 对象保存着用户上网的历史记录，从窗口被打开的那一
 
   ```js
   //跳转到最近的wrox.com 页面
-  history.go("wrox.com")
+  history.go('wrox.com')
 
   //跳转到最近的nczonline.net 页面
-  history.go("nczonline.net")
+  history.go('nczonline.net')
   ```
 
 **_3. back()和 forward()方法_**
