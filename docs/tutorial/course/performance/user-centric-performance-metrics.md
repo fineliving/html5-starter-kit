@@ -12,7 +12,7 @@
 
 实际上，您应用的加载时间是每个用户所有加载时间的汇总，而全面表示加载时间的唯一方法是使用以下直方图所示的分布方法：
 
-![](/advance/performance/perf-metrics-histogram.png)
+![](/tutorial/course/performance/perf-metrics-histogram.png)
 
 X 轴上的数字显示加载时间，而 Y 轴上条的高度显示体验到特定时间段中加载时间的用户相对数量。 正如此图表所示，虽然最大的用户群体验到的加载时间不到 1 或 2 秒，但仍有很多用户体验到相当长的加载时间。
 
@@ -64,7 +64,7 @@ X 轴上的数字显示加载时间，而 Y 轴上条的高度显示体验到特
 
 首次有效绘制 (FMP) 指标能够回答“是否有用？”这一问题。 虽然“有用”这一概念很难以通用于所有网页的方式规范化（因此尚不存在任何规范），但是网页开发者自己很清楚其页面的哪些部分对用户最为有用。
 
-![](/advance/performance/perf-metrics-hero-elements.png)
+![](/tutorial/course/performance/perf-metrics-hero-elements.png)
 
 网页的这些“最重要部分”通常称为主角元素。 例如，在 YouTube 观看页面上，主视频就是主角元素。 在 Twitter 上，主角元素可能是通知标志和第一篇推文。 在天气应用上，主角元素是指定地点的天气预测。 在新闻网站上，主角元素可能是重大新闻和置顶大图。
 
@@ -76,7 +76,7 @@ X 轴上的数字显示加载时间，而 Y 轴上条的高度显示体验到特
 
 在某些情况下，这些任务可能需要很长时间才能运行完，这样的话主线程将被阻塞，并且队列中的所有其他任务都必须等待。
 
-![](/advance/performance/perf-metrics-long-tasks.png)
+![](/tutorial/course/performance/perf-metrics-long-tasks.png)
 
 对用户而言这表现为卡顿不流畅，这也是当前页面性能差的主要原因。
 
@@ -104,7 +104,7 @@ TTI 表示页面的初始 JavaScript 加载完成且主线程空闲（没有长�
 
 页面加载时间线的截图可以帮助你更好地确认这些指标处于加载过程的什么位置。
 
-![](/advance/performance/perf-metrics-load-timeline.png)
+![](/tutorial/course/performance/perf-metrics-load-timeline.png)
 
 下一节将详细介绍如何在真实用户的设备上测量这些指标。
 
@@ -291,7 +291,7 @@ subscribeBtn.addEventListener('click', (event) => {
 - 找出性能差对转化率的影响（无论转化率对你的应用而言意味着什么）。
 - 寻求改善用户体验的措施。 你的应用在移动设备和桌面设备上的表现绝对是值得比较的一件事。下图显示了桌面（蓝色）和移动（橙色）的 TTI 分布。从这个例子可以看出，手机上的 TTI 值比桌面上的要长很多：
 
-![](/advance/performance/perf-metrics-tti-mobile-v-desktop.png)
+![](/tutorial/course/performance/perf-metrics-tti-mobile-v-desktop.png)
 
 虽然这里的数据是特定于应用的（你应该自己测试一下自己应用的数据），下面的例子是一个基于性能指标生成的分析报告：
 
@@ -407,7 +407,7 @@ js 代码分割，优化 js 的加载顺序，不仅可以让页面可交互时�
 
 要成功防止性能退化，你需要在每个新功能版本中，都进行测试和真实用户环境下的性能测试。
 
-![](/advance/performance/perf-metrics-test-cycle.png)
+![](/tutorial/course/performance/perf-metrics-test-cycle.png)
 
 ## 总结和展望
 

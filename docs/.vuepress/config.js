@@ -12,7 +12,6 @@ const otherSidebar = require('./sidebars/other')
 
 const tutorialSidebar = require('./sidebars/tutorial')
 
-// const htmlSidebar = require('./sidebars/basic/html')
 // const htmlCourse1Sidebar = require('./sidebars/basic/html-course1')
 // const cssSidebar = require('./sidebars/basic/css')
 // const cssCourse1Sidebar = require('./sidebars/basic/css-course1')
@@ -350,7 +349,6 @@ module.exports = {
       '/backEnd/': backEndSidebar,
       '/other/': otherSidebar,
       '/tutorial/': tutorialSidebar,
-      // '/basic/html/': htmlSidebar,
       // '/basic/html-course1/': htmlCourse1Sidebar,
       // '/basic/css/': cssSidebar,
       // '/basic/css-course1/': cssCourse1Sidebar,

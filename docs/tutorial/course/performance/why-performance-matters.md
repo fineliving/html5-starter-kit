@@ -22,7 +22,7 @@
 
 上方引用的同一个 DoubleClick by Google 研究还表明，与加载时间约为四倍（19 秒）的网站相比，加载时间在 5 秒以内的网站会话加长 70%、跳出率下降 35%、广告可见率上升 25%。 如需大致了解您的网站对比竞争对手的性能，[请使用 Speed Scorecard 工具](https://www.thinkwithgoogle.com/feature/testmysite/)。
 
-![img](/advance/performance/speed-scorecard-2x.png)
+![img](/tutorial/course/performance/speed-scorecard-2x.png)
 图 1. Speed Scorecard 借助来自美国 4G 网络用户的 Chrome UX Report 数据对比四个相互竞争网站的性能。
 
 ## 性能关乎转化率的提升
@@ -35,7 +35,7 @@
 
 如果您在网页上开展业务，性能发挥着至关重要的作用。 如果您的网站加载速度快，对用户输入响应快，则收入不会差。 如需了解性能可能会对您的收入带来怎样的影响，请使用 [Impact Calculator](https://www.thinkwithgoogle.com/feature/testmysite/) 工具。
 
-![img](/advance/performance/impact-calculator-2x.png)
+![img](/tutorial/course/performance/impact-calculator-2x.png)
 
 图 2. Impact Calculator 估算您可以通过提升网站性能获得的收入。
 
@@ -43,13 +43,13 @@
 
 当您导航到某个网址时，您是从许多可能的起点开始导航。 根据诸多条件的不同（例如连接质量和您使用的设备），您的体验和其他用户的体验可能截然不同。
 
-![img](/advance/performance/speed-comparison.png) 图 3. 基于极慢连接加载的页面（顶部）和基于较快连接加载的页面（底部）的对比。
+![img](/tutorial/course/performance/speed-comparison.png) 图 3. 基于极慢连接加载的页面（顶部）和基于较快连接加载的页面（底部）的对比。
 
 网站开始加载时，用户需要等待一段时间才能看到要显示的内容。 在此之前就谈不上用户体验。 快速连接会让这段时间一闪而过。 而如果连接速度较慢，用户就不得不等待。 页面资源加载较慢时，用户可能会遇到更多问题。
 
 性能是创造良好用户体验的基本要素。 当网站传输大量代码时，浏览器必须使用用户数兆字节的数据流量才能下载相应代码。 移动设备的 CPU 计算能力和内存有限。 一些未经优化的代码，可能我们认为并没有多大，但却常使移动设备崩溃。 这会导致性能低，进而导致无响应。 我们深知人类的行为，用户忍受低性能的应用到一定程度后，必定会将其抛弃。 如果您想了解更多关于如何评估网站性能及寻找改进机会的信息，请查阅[如何看待提速工具](https://developers.google.com/web/fundamentals/performance/speed-tools/?hl=zh-cn)。
 
-![img](/advance/performance/lighthouse-2x.png) 图 4. Lighthouse 中的页面性能概览。
+![img](/tutorial/course/performance/lighthouse-2x.png) 图 4. Lighthouse 中的页面性能概览。
 
 ## 性能关乎用户
 

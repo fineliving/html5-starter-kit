@@ -20,15 +20,15 @@
 
 点击位于 Chrome 工具栏上的 Lighthouse 图标。如果您在工具栏上没有看到此图标，它可能隐藏在 Chrome 的主菜单中。
 
-![Chrome 的菜单中的 Lighthouse 图标](/advance/performance/lighthouse-icon.png)
+![Chrome 的菜单中的 Lighthouse 图标](/tutorial/course/performance/lighthouse-icon.png)
 
 点击此图标后，您应看到一个菜单。
 
-![Lighthouse 菜单](/advance/performance/lighthouse-menu.png)
+![Lighthouse 菜单](/tutorial/course/performance/lighthouse-menu.png)
 
 如果您想仅运行审查的子集，则点击 **Options** 按钮并停用您不关注的审查。 向下滚动并按 **OK** 以确认您的更改。
 
-![Lighthouse 选项菜单](/advance/performance/lighthouse-options-menu.png)
+![Lighthouse 选项菜单](/tutorial/course/performance/lighthouse-options-menu.png)
 
 点击 **Generate report** 按钮以针对当前打开的页面运行 Lighthouse 测试。
 

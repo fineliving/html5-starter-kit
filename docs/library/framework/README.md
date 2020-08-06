@@ -16,7 +16,7 @@
 
 Github Page 使用
 
-![1](/libraries/frameworks/1.png)
+![1](/library/frameworks/1.png)
 
 [使用 Hexo+Github 一步步搭建属于自己的博客（基础）](https://www.cnblogs.com/fengxiongZz/p/7707219.html)
 
@@ -113,7 +113,7 @@ bootstrap 教程
 
 用:key
 
-![vue1](/libraries/frameworks/vue1.png)
+![vue1](/library/frameworks/vue1.png)
 
 [vue 项目， 父组件中每次点击按钮重新加载子组件，（重新生成 dom 元素）](https://blog.csdn.net/shi851051279/article/details/92802027)
 

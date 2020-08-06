@@ -4,7 +4,7 @@ https://web.dev/rail/
 
 RAIL 是一种以用户为中心的性能模型。每个网络应用均具有与其生命周期有关的四个不同方面，且这些方面以不同的方式影响着性能：
 
-![img](/advance/performance/rail.png)
+![img](/tutorial/course/performance/rail.png)
 
 TLDR
 
@@ -43,7 +43,7 @@ TLDR
 
 如果动画帧率发生变化，您的用户确实会注意到。您的目标就是每秒生成 60 帧，每一帧必须完成以下所有步骤：
 
-![img](/advance/performance/render-frame.png)
+![img](/tutorial/course/performance/render-frame.png)
 
 从纯粹的数学角度而言，每帧的预算约为 16 毫秒（1000 毫秒 / 60 帧 = 16.66 毫秒/帧）。 但因为浏览器需要花费时间将新帧绘制到屏幕上，只有 10 毫秒来执行代码。
 
