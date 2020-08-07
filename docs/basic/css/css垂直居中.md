@@ -1,0 +1,428 @@
+# 垂直居中
+
+https://www.cnblogs.com/zhouhuan/p/vertical_center.html
+
+## 1.绝对定位%负外边距(px)
+
+优点：**兼容性不错**。缺点：**必须知道被居中块级元素的尺寸**。
+
+::: run {title:"1.使用绝对定位和负外边距对块级元素进行垂直居中",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <div id="child">我是测试DIV</div>
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    position: relative;
+  }
+  #child {
+    width: 150px;
+    height: 100px;
+    background: orange;
+    position: absolute;
+    top: 50%;
+    margin: -50px 0 0 0;
+    line-height: 100px;
+  }
+</style>
+```
+
+:::
+
+## 2.绝对定位&负外边距(%)
+
+::: run {title:"3. 另外一种使用绝对定位和负外边距进行垂直居中的方式",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <div id="child">我也是个测试DIV</div>
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    position: relative;
+  }
+  #child {
+    width: 50%;
+    height: 30%;
+    background: pink;
+    position: absolute;
+    top: 50%;
+    margin: -15% 0 0 0;
+  }
+</style>
+```
+
+:::
+
+## 3.绝对定位&margin:auto
+
+两步：
+
+1. top 和 bottom 设为相等的值（不论是 0 还是 99999px）
+2. margin:auto
+
+除图片这种自身就包含尺寸的元素，其他被居中元素**必须设置宽高**
+
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <div id="child">呆呆今天退役了(。﹏。)</div>
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    position: relative;
+  }
+  #child {
+    width: 200px;
+    height: 100px;
+    background: #a1ccfe;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 100px;
+  }
+</style>
+```
+
+:::
+
+## 4.绝对定位&transform
+
+优点：**不必提前知道被居中元素的尺寸**
+
+::: run {title:"2.使用绝对定位和 transform",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="child">
+      我是一串很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的文本
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    position: relative;
+  }
+  #child {
+    background: #93bc49;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+</style>
+```
+
+:::
+
+## 5.父元素padding
+
+父元素设置相等的上下内边距
+父元素不能设置高度，让它自动被填充起来
+
+没有什么技术含量，但其实在某些场景下也是非常好用的。
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <div id="child">今天西安的霾严重的吓人，刚看了一眼PM2.5是422</div>
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    background: #ddd;
+    padding: 100px 0;
+  }
+  #child {
+    width: 200px;
+    height: 100px;
+    background: #f7a750;
+    line-height: 50px;
+  }
+</style>
+```
+
+:::
+
+## 6.设置第三方基准
+
+两步：
+设置一个高度等于父元素高度一半的第三方基准元素
+margin-top：负的自身高度一半
+
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <div id="base"></div>
+      <div id="child">今天写了第一篇博客，希望可以坚持写下去！</div>
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+  }
+  #base {
+    height: 50%;
+    background: #af9bd3;
+  }
+  #child {
+    height: 100px;
+    background: rgba(131, 224, 245, 0.6);
+    line-height: 50px;
+    margin-top: -50px;
+  }
+</style>
+```
+
+:::
+
+## 7.flex布局(交叉轴居中)
+
+flex 也就是 flexible，意为弹性的、灵活的、柔韧的、易弯曲的。
+两步：
+display:flex;将其指定为 flex 布局的容器
+align-items，定义项目在交叉轴（这里是纵向轴）上的对齐方式
+
+flex-start:：交叉轴的起点对齐；
+flex-end：交叉轴的终点对齐；
+center：交叉轴的中点对齐；
+baseline：项目第一行文字的基线对齐；
+stretch（该值是默认值）：如果项目没有设置高度或者设为了 auto，那么将占满整个容器的高度。
+
+flex 布局概念
+
+- flex 是一维布局, 项目任何时候只能沿一个方向排列,要么水平, 要么垂直
+- flex 项目排列的方向, 称为主轴, 水平和垂直二种
+- 与主轴垂直的称为`交叉轴`(有的教程也称之为副轴/侧轴)
+
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">雾霾天气，太久没有打球了</div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+  }
+</style>
+```
+
+:::
+这种方式同样适用于块级元素：
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <div id="child">
+        程序员怎么才能保护好眼睛？
+      </div>
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+  }
+  #child {
+    width: 300px;
+    height: 100px;
+    background: #8194aa;
+    line-height: 100px;
+  }
+</style>
+```
+
+:::
+
+## 8.flex布局(主轴居中)
+
+三步：
+display:flex
+改变主轴的方向 flex-direction: column
+改变在主轴上的`对齐方式`justify-content
+
+row（该值为`默认值`）：主轴为水平方向，起点在左端；
+row-reverse：主轴为水平方向，起点在右端；
+column：主轴为垂直方向，起点在上沿；
+column-reverse：主轴为垂直方向，起点在下沿。
+
+justify-content 取值有五个(与主轴的方向有关,假设主轴为从左到右的)
+flex-start（该值是默认值）：左对齐；
+flex-end：右对齐；
+center：居中对齐；
+space-between：两端对齐，各个项目之间的间隔均相等；
+space-around：各个项目两侧的间隔相等。
+
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <div id="child">
+        答案当然是多用绿色的背景哈哈
+      </div>
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #child {
+    width: 300px;
+    height: 100px;
+    background: #08bc67;
+    line-height: 100px;
+  }
+</style>
+```
+
+:::
+
+## 9.line-height单行文本居中
+
+注意：不能设为百分比。官方描述：基于当前字体尺寸的百分比行间距。所以这里的百分比是是`相对于字体尺寸`来讲的而不是父元素尺寸
+
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      我是一段测试文本
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    line-height: 300px;
+  }
+</style>
+```
+
+:::
+
+## 10.line-height&vertical-align对图片
+
+vertical 垂直 align 排列
+
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <img src="duncan.jpeg" />
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    line-height: 300px;
+  }
+  #box img {
+    vertical-align: middle;
+  }
+</style>
+```
+
+:::
+
+## 11display&vertical-align对容器里的文字
+
+::: run {title:"4. 绝对定位结合 margin: auto",row:true,reverse:true}
+
+```html
+<template>
+  <body>
+    <div id="box">
+      <div id="child">我也是一段测试文本</div>
+    </div>
+  </body>
+</template>
+<style>
+  #box {
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    display: table;
+  }
+  #child {
+    display: table-cell;
+    vertical-align: middle;
+  }
+</style>
+```
+
+:::
+
+vertical-align 属性只对拥有 valign 特性的 html 元素起作用，如\<td>\<th>，而\<div>,\<span>则不行
+
+valign 属性规定单元格中内容的垂直排列方式，语法：\<td valign="value">，value 的可能取值有四种：
+
+top：对内容进行上对齐
+middle：对内容进行居中对齐
+bottom：对内容进行下对齐
+baseline：`基线`对齐，基线是一条虚构的线。在文本中字母以基线为基准。效果常常与 bottom 值相同。如果文本的字号各不相同，那么 baseline 的效果会更好。
