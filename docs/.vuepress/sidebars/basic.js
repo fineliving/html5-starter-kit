@@ -15,14 +15,14 @@ module.exports = [
       {
         title: 'DOM',
         path: '/basic/html/元素',
-        children: ['/basic/html/html语义化'],
+        children: ['/basic/html/语义化'],
       },
       {
         title: '语义化',
         path: '/basic/html/元素',
-        children: ['/basic/html/html语义化'],
+        children: ['/basic/html/语义化'],
       },
-      '/basic/html/html代码规范',
+      '/basic/html/代码规范',
     ],
   },
   {
@@ -40,18 +40,17 @@ module.exports = [
       },
       {
         title: '布局',
-        children: [],
+        children: ['/basic/css/居中', '/basic/css/垂直居中'],
       },
       {
         title: '交互',
         children: [],
       },
-      '/basic/css/css代码规范',
-      '/basic/css/css样式的书写顺序及原理',
-      '/basic/css/浏览器渲染原理及流程',
-      '/basic/css/关键渲染路径',
-      '/basic/css/居中',
-      '/basic/css/垂直居中',
+      {
+        title: '代码规范',
+        children: ['/basic/css/代码规范', '/basic/css/代码书写顺序', '/basic/css/代码命名规范'],
+      },
+      '/basic/css/伪类',
     ],
   },
   {

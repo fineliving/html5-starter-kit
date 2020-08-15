@@ -11,7 +11,7 @@ module.exports = [
     title: '性能',
     path: '/advance/performance/',
     sidebarDepth: 1,
-    children: [],
+    children: ['/advance/performance/浏览器渲染原理及流程', '/advance/performance/关键渲染路径'],
   },
   {
     title: '安全',

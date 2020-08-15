@@ -6,12 +6,6 @@
 
 ---
 
-css 规范
-
-[推荐大家使用的 CSS 书写规范、顺序](http://www.shejidaren.com/css-written-specifications.html)
-
----
-
 css 七层结构
 
 [CSS 七层叠层顺序(stacking level) ](https://www.cnblogs.com/conansky/p/6294535.html)
