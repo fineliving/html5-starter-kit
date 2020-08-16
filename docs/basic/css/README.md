@@ -12,31 +12,6 @@ css 七层结构
 
 ---
 
-效果图：
-
-![1](/basic/css/1.jpg)
-
-伪类：
-
-:focus 选择器用于选取获得焦点的元素。
-
-:hover 选择器用于选择鼠标指针浮动在上面的元素。
-
-CSS 属性
-
-overflow 属性规定当内容溢出元素框时发生的事情。
-
-英语：
-
-focus [ˈfəʊkəs] 集中(注意力、精力等于);
-
-hover [ˈhɒvə(r)] 翱翔; 盘旋;
-overflow [ˌəʊvəˈfləʊ] 漫出; 溢出;
-
-[css 之 input hover,focus 伪类特效](http://www.86y.org/art_detail.aspx?id=728&bsh_bid=471737756)
-
----
-
 盒子模型学习
 
 [CSS--两种盒子模型以及 border 属性](https://blog.csdn.net/cat_foursi/article/details/71189411)
