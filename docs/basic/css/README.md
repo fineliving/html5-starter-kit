@@ -6,22 +6,6 @@
 
 ---
 
-css 七层结构
-
-[CSS 七层叠层顺序(stacking level) ](https://www.cnblogs.com/conansky/p/6294535.html)
-
----
-
-盒子模型学习
-
-[CSS--两种盒子模型以及 border 属性](https://blog.csdn.net/cat_foursi/article/details/71189411)
-
-[盒子模型 box-sizing 中 content-box 和 border-box - penjoyer](https://blog.csdn.net/Practicer2015/article/details/46454921)
-
-[content-box 与 border-box 区别](https://blog.csdn.net/qq_27892551/article/details/50522169)
-
----
-
 在热力图中使用，用于 css 模块布局，要会
 
 [CSS calc() 函数](https://www.runoob.com/cssref/func-calc.html)
