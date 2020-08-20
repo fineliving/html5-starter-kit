@@ -51,6 +51,7 @@ module.exports = [
         children: ['/basic/css/代码规范', '/basic/css/代码书写顺序', '/basic/css/代码命名规范'],
       },
       '/basic/css/伪类',
+      '/basic/css/数据类型',
     ],
   },
   {
