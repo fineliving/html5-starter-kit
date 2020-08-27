@@ -23,6 +23,7 @@ module.exports = [
         children: ['/basic/html/语义化'],
       },
       '/basic/html/代码规范',
+      '/basic/html/参考',
     ],
   },
   {
@@ -32,7 +33,7 @@ module.exports = [
     children: [
       {
         title: 'CSSOM',
-        children: [],
+        children: ['/basic/css/初探CSS对象模型'],
       },
       {
         title: '选择器',
@@ -52,6 +53,7 @@ module.exports = [
       },
       '/basic/css/伪类',
       '/basic/css/数据类型',
+      '/basic/css/参考',
     ],
   },
   {
@@ -87,6 +89,7 @@ module.exports = [
         title: '正则表达式',
         children: [],
       },
+      '/basic/js/参考',
     ],
   },
 ]
