@@ -88,15 +88,15 @@ img {
 
 ![img](https://img2.tuicool.com/jyU3IvI.png!web)
 
-对于 Web 的样式，其处理 HTML 有点类似，需要将收到的 CSS 规则转换成某种浏览器能够理解和处理的东西。因此，我们会重复 HTML 过程，只不过是为 CSS 而不是 HTML:
+对于 Web 的样式，其处理 HTML 有点类似，**需要将收到的 CSS 规则转换成某种浏览器能够理解和处理的东西** 。因此，我们会重复 HTML 过程，只不过是为 CSS 而不是 HTML:
 
 ![img](https://img0.tuicool.com/7v2iIbA.png!web)
 
-CSS 字节转换成字符，接着转换成令牌和节点，最后链接到一个 CSSOM 的树结构中：
+**CSS 字节转换成字符，接着转换成令牌和节点，最后链接到一个 CSSOM 的树结构中：**
 
 ![img](https://img2.tuicool.com/myiAvaU.png!web)
 
-是不是看上去和 DOM 结构树类似呀。那么 CSSOM 为何具有树结构呢？为页面上的任何对象计算最后一组样式时，浏览器都会先从适用于该节点的最通用规则开始，比如，如果该节点是 `body` 元素的子元素，则应用所有 `body` 样式，然后通过应用更具体的规则（这里将会运用 [CSS 层级相关的管理规则](http://www.w3cplus.com/css/Illustrated-CSS-details-and-cases-chr2-cascade-and-inherit.html) ）以递归方式优化计算的样式。
+是不是看上去和 DOM 结构树类似呀。那么 CSSOM 为何具有树结构呢？**为页面上的任何对象计算最后一组样式时，浏览器都会先从适用于该节点的最通用规则开始**，比如，如果该节点是 `body` 元素的子元素，则应用所有 `body` 样式，然后通过应用更具体的规则（这里将会运用 [CSS 层级相关的管理规则](http://www.w3cplus.com/css/Illustrated-CSS-details-and-cases-chr2-cascade-and-inherit.html) ）以递归方式优化计算的样式。
 
 上面的示例就很形象的介绍了 CSSOM。
 
