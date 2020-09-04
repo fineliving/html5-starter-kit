@@ -1,5 +1,7 @@
 # 初探 CSS 对象模型（CSSOM）
 
+https://www.w3cplus.com/javascript/cssom-css-typed-om.html
+
 可以通过一些 JavaScript 的 API 操作和处理 Web 页面上的 HTML 元素。在 Web 中除了 DOM 之外还有另外一个对象模型： **CSS 对象模型（即 CSSOM）** 。
 
 或许你已经在项目中已经用过了，只不过没有意识到这一点而以。今天这篇文章中，我们主要来一起探讨有关于 CSSOM 相关的特性。
