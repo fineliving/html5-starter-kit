@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{width: 300px;height: 40px;background: #ccc;margin: 20px auto;position: relative;}
+        .box *{margin: 0;}
+        .box h2{line-height: 40px;}
+        .box p{width: 200px;background: #eee;font-size: 14px;position: absolute;left:0;top:0;display: none;z-index: 1;}
+
+        #box{width: 100px;height: 100px;background: red;display: block}
+        #box:hover{display: none;}
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>这是一个标题1</h2>
+        <p>这是标题1对应的详细文本这是标题1对应的详细文本这是标题1
+        对应的详细文本这是标题1对应的详细文本这是标题1
+        对应的详细文本这是标题1对应的详细文本这是标题1</p>
+    </div>
+    <div class="box">
+        <h2>这是一个标题2</h2>
+        <p>这是标题2对应的详细文本题2对应的详细文本题2对应的详细文本题2
+        对应的详细文本题2对应的详细文本题2对应的详细文本题2
+        对应的详细文本题2对应的详细文本题2</p>
+    </div>
+
+    <div id="box"></div>
+</body>
+<script>
+    var ah2 = document.querySelectorAll(".box h2");
+
+    for(var i=0;i<ah2.length;i++){
+        ah2[i].onmouseover = function(){
+            // console.log(this); 
+            this.nextElementSibling.style.display = "block";
+        }
+        ah2[i].onmousemove = function(eve){
+            // console.log(this);
+            var e = eve || window.event;
+            // 将h2后面的p的定位位置，设置成鼠标的坐标，稍微往后一点，防止阻挡鼠标放在事件源身上
+            this.nextElementSibling.style.left = e.offsetX + 5 + "px";
+            this.nextElementSibling.style.top = e.offsetY + 5 + "px";
+        }
+        ah2[i].onmouseout = function(){
+            // console.log(this);
+            this.nextElementSibling.style.display = "none";
+        }
+    }
+
+</script>
+</html>
