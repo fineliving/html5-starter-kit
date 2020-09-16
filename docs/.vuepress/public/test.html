@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" rel="stylesheet" type="text/css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet-src.js"></script>
-</head>
-<body>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet-src.js"></script>
+  </head>
+  <body>
     <div id="content">
-        <div id="mapPane"></div>
-      </div>
-</body>
-<script>
+      <div id="mapPane"></div>
+    </div>
+  </body>
+  <script>
     document.addEventListener('DOMContentLoaded', function() {
-        let flexContainer = document.querySelector('#mapPane');    
-        let flexMap = L.map(flexContainer).setView([51.505, -0.09], 18);;
-        let maplayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {foo: 'bar'})
-        flexMap.addLayer(maplayer)
+      let flexContainer = document.querySelector('#mapPane')
+      let flexMap = L.map(flexContainer).setView([51.505, -0.09], 18)
+      let maplayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { foo: 'bar' })
+      flexMap.addLayer(maplayer)
     })
-</script>
-<style>
+  </script>
+  <style>
     html,
     body {
-    margin: 0px;
-    /* flex:1; */
-    height: 100%;
-    width: 100%;
+      margin: 0px;
+      /* flex:1; */
+      height: 100%;
+      width: 100%;
     }
     body {
-    display: flex;
-    flex-flow: column wrap;
+      display: flex;
+      flex-flow: column wrap;
     }
     #content {
-    flex: 1 1;
-    order: 2;
-    display: flex;/*这是弹性盒子核心*/
+      flex: 1 1;
+      order: 2;
+      display: flex; /*这是弹性盒子核心*/
     }
     #mapPane {
-    flex: 1;/*这是弹性盒子核心*/
+      flex: 1; /*这是弹性盒子核心*/
     }
-</style>
+  </style>
 </html>
