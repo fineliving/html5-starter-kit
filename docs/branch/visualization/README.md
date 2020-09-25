@@ -999,7 +999,7 @@ Leaflet resize 的使用
 
 ## [利用 Arcgis for javascript API 绘制 GeoJSON 并同时弹出多个 Popup](https://blog.csdn.net/duzanuolu/article/details/64130191)
 
-[Esri/arcgis-js-api at 3.14.0](https://github.com/Esri/arcgis-js-api/tree/3.14.0)
+[Esri/arcgis-js-api at 3.14.0 ](https://github.com/Esri/arcgis-js-api/tree/3.14.0)
 
 ---
 
