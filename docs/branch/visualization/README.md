@@ -1003,7 +1003,7 @@ Leaflet resize 的使用
 
 ---
 
-[arcgis-js-api/popup at 4.11.0 · Esri/arcgis-js-api](https://github.com/Esri/arcgis-js-api/tree/4.11.0/popup)
+[arcgis-js-api/popup at 4.11.0·Esri/arcgis-js-api](https://github.com/Esri/arcgis-js-api/tree/4.11.0/popup)
 
 ---
 
