@@ -1023,7 +1023,7 @@ Leaflet resize 的使用
 
 ---
 
-[ArcGIS API forJavaScript 4.X 基础教程 （二）地图（Maps）与视图（Views）的讲解](https://blog.csdn.net/cj9551/article/details/85066016)
+[ArcGIS API forJavaScript 4.X 基础教程(二）地图（Maps）与视图（Views）的讲解](https://blog.csdn.net/cj9551/article/details/85066016)
 
 ---
 
